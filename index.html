@@ -60,21 +60,21 @@
         <label for="code">Card Number</label><br>
         <input type="text" ng-model="codeCard"
                placeholder="Card number" id="code"
-               onkeyup="validInput(this)"><br>
-
+               onkeyup="validInputNumber(this)"><br>
 
 
         <label for="fullName">Full Name</label><br>
         <input type="text" ng-model="name"
-               id="fullName" placeholder="Full Name"><br>
+               id="fullName" placeholder="Full Name"
+        onkeyup="validInputString(this)"><br>
 
         <label for="expiry">Expiry</label><br>
         <input type="text" ng-model="expiry" placeholder="MM/YY" id="expiry"
-               onkeyup="validInput(this)"><br>
+               onkeyup="validInputNumber(this)"><br>
 
         <label for="cvc">CVC</label><br>
         <input type="text" ng-model="cvc" id="cvc" placeholder="CVC"
-               onkeyup="validInput(this)"><br>
+               onkeyup="validInputNumber(this)"><br>
 
 
     </form>

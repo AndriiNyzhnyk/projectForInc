@@ -1,7 +1,5 @@
 var module = angular.module("MyApp", []);
 
-
-
 function validInput(input) {
     console.log(input);
     var value = input.value;

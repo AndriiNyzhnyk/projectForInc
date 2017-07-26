@@ -22,17 +22,31 @@
             <p ng-bind="codeCard"></p>
         </div>
 
-        <div id="namePerson">
+        <div id="namePerson" class="position">
             <p ng-bind="name"></p>
         </div>
 
-        <div id="expiryDate">
-            <p ng-bind="expiry"></p>
+        <div id="expiryDate" class="position">
+            <div class="clear"></div>
+            <div id="containerExpiryDate">
+                <div id="validDate">
+                    <p>valid data</p>
+                </div>
+
+                <div id="paragExpiryDate">
+                    <p>MONTH/YEAR</p>
+                </div>
+
+                <div id="textAngular">
+                    <p ng-bind="expiry"></p>
+                </div>
+            </div>
+            <div class="clear"></div>
         </div>
 
-        <div id="cvcCode">
-            <p ng-bind="cvc"></p>
-        </div>
+        <!--<div id="cvcCode" class="position">-->
+            <!--<p ng-bind="cvc"></p>-->
+        <!--</div>-->
 
     </div>
 
@@ -63,12 +77,8 @@
                onkeyup="validInput(this)"><br>
 
 
-
-        <!--{{test}}-->
-
-
-        <!--<input type="submit" value="send">-->
     </form>
+
     <script src="script/main.js"></script>
 </body>
 </html>

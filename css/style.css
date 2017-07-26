@@ -1,6 +1,22 @@
 /*global style*/
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: "Times New Roman", Arial;
+}
+
+p {
+    color: #f5eded;
+    font-size: 1.8em;
+    margin: 0;
+}
+
 .position {
     position: absolute;
+}
+
+.clear {
+    clear: both;
 }
 
 /*input[type=number]::-webkit-inner-spin-button,*/
@@ -13,13 +29,8 @@
     /*-moz-appearance: textfield;*/
 /*}*/
 
-p {
-    color: #f5eded;
-    font-size: 1.8em;
-    margin: 0;
-}
 
-
+/*style for form*/
 form {
     margin-left: 30px;
 }
@@ -39,6 +50,7 @@ form input {
 
 }
 
+/*style for bankCard*/
 #card1 {
     width: 340px;
     height: 210px;
@@ -75,3 +87,50 @@ form input {
     left: 40px;
 }
 
+#namePerson {
+    bottom: 30px;
+    left: 40px;
+}
+
+#namePerson p {
+    font-size: 1.5em;
+}
+
+/*style for expiry card*/
+#expiryDate {
+    bottom: 25px;
+    right: 50px;
+}
+
+#validDate, #paragExpiryDate, #textAngular {
+    float: left;
+}
+
+#validDate {
+    font-size: 0.3em;
+    width: 25px;
+}
+
+#validDate p {
+    margin: 0;
+    padding: 0;
+}
+
+
+#paragExpiryDate {
+    margin-top: -8px;
+}
+
+#paragExpiryDate p {
+    font-size: 0.5em;
+}
+
+#textAngular {
+    width: 55px;
+    height: 25px;
+    margin: 0 0 0 -55px;
+}
+
+#textAngular p {
+    font-size: 1.2em;
+}

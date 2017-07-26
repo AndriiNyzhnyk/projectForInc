@@ -1,0 +1,77 @@
+/*global style*/
+.position {
+    position: absolute;
+}
+
+/*input[type=number]::-webkit-inner-spin-button,*/
+/*input[type=number]::-webkit-outer-spin-button {*/
+    /*-webkit-appearance: none;*/
+    /*margin: 0;*/
+/*}*/
+
+/*input[type='number'] {*/
+    /*-moz-appearance: textfield;*/
+/*}*/
+
+p {
+    color: #f5eded;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+
+form {
+    margin-left: 30px;
+}
+
+form label {
+    color: #7a7272;
+    font-size: 1.1em;
+    font-family: Arial;
+    /*margin-bottom: 55px;*/
+}
+
+form input {
+    color: #7a7272;
+    margin:15px 0 20px 0;
+    width: 600px;
+    padding: 8px 0 8px 15px;
+
+}
+
+#card1 {
+    width: 340px;
+    height: 210px;
+    background-color: #46398E;
+    border-radius: 9px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+#imgVisa {
+    top: 20px;
+    right: 20px;
+}
+
+#imgVisa img {
+    width: 70px;
+    height: 40px;
+}
+
+#imgCode {
+    top: 50px;
+    left: 40px;
+}
+
+#imgCode img {
+    width: 55px;
+    height: 35px;
+    border-radius: 7px;
+}
+
+#codeCard {
+    top: 100px;
+    left: 40px;
+}
+

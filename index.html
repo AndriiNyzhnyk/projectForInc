@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+</head>
+<body>
+    <div id="card1">
+        <div id="imgVisa" class="position">
+            <img src="images/visa.jpg">
+        </div>
+
+        <div id="imgCode" class="position">
+            <img src="images/code.png">
+        </div>
+
+        <div id="codeCard" class="position">
+            <p ng-bind="codeCard"></p>
+        </div>
+
+        <div id="namePerson">
+            <p ng-bind="name"></p>
+        </div>
+
+        <div id="expiryDate">
+            <p ng-bind="expiry"></p>
+        </div>
+
+        <div id="cvcCode">
+            <p ng-bind="cvc"></p>
+        </div>
+
+    </div>
+
+
+
+
+    <br><br><br>
+
+    <form action="" method="">
+
+        <label for="code">Card Number</label><br>
+        <input type="text" ng-model="codeCard"
+               placeholder="Card number" id="code"
+               onkeyup="validInput(this)"><br>
+
+
+
+        <label for="fullName">Full Name</label><br>
+        <input type="text" ng-model="name"
+               id="fullName" placeholder="Full Name"><br>
+
+        <label for="expiry">Expiry</label><br>
+        <input type="text" ng-model="expiry" placeholder="MM/YY" id="expiry"
+               onkeyup="validInput(this)"><br>
+
+        <label for="cvc">CVC</label><br>
+        <input type="text" ng-model="cvc" id="cvc" placeholder="CVC"
+               onkeyup="validInput(this)"><br>
+
+
+
+        <!--{{test}}-->
+
+
+        <!--<input type="submit" value="send">-->
+    </form>
+    <script src="script/main.js"></script>
+</body>
+</html>

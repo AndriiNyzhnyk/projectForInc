@@ -79,7 +79,7 @@ function getPId(inputId) {
     return reqItem;
 }
 
-// function dynamic color text
+// function dynamic color text card
 var previousReqItem;
 function dynamicColorText(inputId) {
     var reqItem = getPId(inputId);
@@ -90,8 +90,5 @@ function dynamicColorText(inputId) {
             $("#" + previousReqItem + " p").css("color", "#a8a3a3");
         }
         previousReqItem = reqItem;
-
     }
-
-    previousReqItem = reqItem;
 }

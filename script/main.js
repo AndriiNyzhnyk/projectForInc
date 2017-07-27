@@ -28,6 +28,7 @@ function validInputNumber(input) {
         input.value = value.substring(0, value.length - 1);
     }
 
+
 }
 
 // function for validation of "input" from numbers and characters
@@ -43,4 +44,54 @@ function validInputString(input) {
     if(+value.length > 40) {
         input.value = value.substring(0, value.length - 1);
     }
+}
+
+
+$("#code").on("click", function () {
+    dynamicColorText(this.id);
+});
+
+$("#cvc").on("click", function () {
+    dynamicColorText(this.id);
+});
+
+$("#expiry").on("click", function () {
+    dynamicColorText(this.id);
+});
+
+$("#fullName").on("click", function () {
+    dynamicColorText(this.id);
+});
+
+// connect "id input" to " id block text Angular"
+function getPId(inputId) {
+    var reqItem;
+    if(inputId == "code") {
+        reqItem = "codeCard";
+    } else if(inputId == "cvc") {
+        reqItem = "cvcCode";
+    } else if(inputId == "expiry") {
+        reqItem = "textAngular";
+    } else {
+        reqItem = "namePerson";
+    }
+    
+    return reqItem;
+}
+
+// function dynamic color text
+var previousReqItem;
+function dynamicColorText(inputId) {
+    var reqItem = getPId(inputId);
+
+    if(reqItem != previousReqItem) {
+        $("#" + reqItem + " p").css("color", "white");
+        if(previousReqItem !== undefined) {
+            $("#" + previousReqItem + " p").css("color", "#a8a3a3");
+        }
+        previousReqItem = reqItem;
+
+    }
+
+    previousReqItem = reqItem;
 }

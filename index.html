@@ -11,7 +11,7 @@
 <body>
     <div id="card1">
         <div id="imgVisa" class="position">
-            <img src="images/visa.jpg">
+            <img src="images/visaF.jpg">
         </div>
 
         <div id="imgCode" class="position">
@@ -50,6 +50,27 @@
 
     </div>
 
+    <div id="card2">
+        <div id="blackLine"></div>
+        <div id="whiteLineAndCodeCvc">
+            <div class="clear"></div>
+            <div id="whiteLine"></div>
+            <div id="cvcCode" class="position">
+                <p ng-bind="cvc"></p>
+            </div>
+            <div id="blockInfo" class="position">
+                <div id="infoImg">
+                    <img src="images/code.png">
+                </div>
+                <div id="infoText">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Dolore est exercitationem modi natus, obcaecati similique soluta voluptas.
+                        Dolore fugit impedit molestiae quos.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
 
 
 
@@ -61,7 +82,6 @@
         <input type="text" ng-model="codeCard"
                placeholder="Card number" id="code"
                onkeyup="validInputNumber(this)"><br>
-
 
         <label for="fullName">Full Name</label><br>
         <input type="text" ng-model="name"

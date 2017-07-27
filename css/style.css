@@ -6,7 +6,7 @@ body, html {
 }
 
 p {
-    color: #f5eded;
+    color: #a8a3a3;
     font-size: 1.8em;
     margin: 0;
 }
@@ -47,6 +47,8 @@ form input {
     margin:15px 0 20px 0;
     width: 600px;
     padding: 8px 0 8px 15px;
+    /*border-radius: 0;*/
+    /*border: 0;*/
 
 }
 
@@ -109,10 +111,11 @@ form input {
 #validDate {
     font-size: 0.3em;
     width: 25px;
+    text-align: right;
 }
 
 #validDate p {
-    margin: 0;
+    margin: 0 5px 0 0;
     padding: 0;
 }
 
@@ -134,3 +137,71 @@ form input {
 #textAngular p {
     font-size: 1.2em;
 }
+
+
+#card2 {
+    width: 340px;
+    height: 210px;
+    background-color: #46398E;
+    border-radius: 9px;
+    position: relative;
+    top: 50px;
+    left: 30px;
+
+}
+
+#blackLine {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 20px;
+}
+
+#whiteLine {
+    background-color: white;
+    height: 35px;
+    width: 260px;
+    position: absolute;
+    left: 12px;
+    top: 90px;
+}
+
+#cvcCode {
+    right: 15px;
+    top: 90px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+
+#cvcCode p {
+    font-size: 1.1em;
+}
+
+
+#blockInfo {
+    top: 140px;
+
+}
+
+#infoImg {
+    width: 70px;
+}
+
+#infoImg img {
+    width: 55px;
+    height: 35px;
+    border-radius: 7px;
+    margin-left: 12px;
+
+}
+
+#infoText {
+    margin: -40px 0 0 85px;
+    width: 240px;
+}
+
+#infoText p {
+    font-size: 0.55em;
+ }

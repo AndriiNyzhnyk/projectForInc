@@ -32,7 +32,7 @@ p {
 
 /*style for form*/
 form {
-    margin-left: 30px;
+    margin: 50px 0 0 30px;
 }
 
 form label {
@@ -47,9 +47,20 @@ form input {
     margin:15px 0 20px 0;
     width: 600px;
     padding: 8px 0 8px 15px;
-    /*border-radius: 0;*/
-    /*border: 0;*/
 
+}
+
+#monitorSlider {
+    padding: 0;
+    margin: 30px 0 0 30px;
+    width: 340px;
+    height: 210px;
+    overflow: hidden;
+}
+
+#containerSlider {
+    width: 700px;
+    height: 100%;
 }
 
 /*style for bankCard*/
@@ -59,8 +70,7 @@ form input {
     background-color: #46398E;
     border-radius: 9px;
     position: relative;
-    top: 20px;
-    left: 30px;
+    display: inline-block;
 }
 
 #imgVisa {
@@ -159,16 +169,14 @@ form input {
     list-style-type: none;
 }
 
-
+/*style for bgCard*/
 #card2 {
     width: 340px;
     height: 210px;
     background-color: #46398E;
     border-radius: 9px;
     position: relative;
-    top: 50px;
-    left: 30px;
-
+    display: inline-block;
 }
 
 #blackLine {
@@ -213,7 +221,6 @@ form input {
 
 #blockInfo {
     top: 140px;
-
 }
 
 #infoImg {

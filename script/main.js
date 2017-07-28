@@ -48,25 +48,29 @@ function validInputString(input) {
 
 
 $("#code").on("click", function () {
-    dynamicColorText(this.id);
-    hideDefaultText(this.id);
-    auditActiveInput(this.id);
-});
-
-$("#cvc").on("click", function () {
-    dynamicColorText(this.id);
-    hideDefaultText(this.id);
-    auditActiveInput(this.id);
-
-});
-
-$("#expiry").on("click", function () {
+    slider(false);
     dynamicColorText(this.id);
     hideDefaultText(this.id);
     auditActiveInput(this.id);
 });
 
 $("#fullName").on("click", function () {
+    slider(false);
+    dynamicColorText(this.id);
+    hideDefaultText(this.id);
+    auditActiveInput(this.id);
+});
+
+$("#expiry").on("click", function () {
+    slider(false);
+    dynamicColorText(this.id);
+    hideDefaultText(this.id);
+    auditActiveInput(this.id);
+});
+
+
+$("#cvc").on("click", function () {
+    slider(true);
     dynamicColorText(this.id);
     hideDefaultText(this.id);
     auditActiveInput(this.id);
@@ -139,4 +143,24 @@ function auditActiveInput(id) {
     }, 2000);
 
 };
+
+// slider cards
+var card1 = document.getElementById("card1");
+var card2 = document.getElementById("card2");
+var widthSlider = card1.offsetWidth;
+
+
+// function control slider
+var sup = 0;
+function slider(way) {
+    if (way == true && sup == 0) {
+        card2.style.marginLeft = -widthSlider - 4 + "px";
+        sup--;
+    }
+
+    if(way == false && sup < 0) {
+        card2.style.marginLeft = widthSlider + 4 + "px";
+        sup++;
+    }
+}
 

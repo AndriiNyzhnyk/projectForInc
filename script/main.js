@@ -163,4 +163,3 @@ function slider(way) {
         sup++;
     }
 }
-

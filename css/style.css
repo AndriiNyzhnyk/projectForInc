@@ -108,6 +108,7 @@ form input {
 #defaultCodeCard ul li {
     display: inline-block;
     list-style-type: none;
+    padding: 2px;
 }
 
 #namePerson {
@@ -167,6 +168,7 @@ form input {
 #defaultTextAngular ul li {
     display: inline-block;
     list-style-type: none;
+    padding: 1px;
 }
 
 /*style for bgCard*/
@@ -199,7 +201,7 @@ form input {
 #cvcCode {
     right: 15px;
     top: 90px;
-    width: 50px;
+    min-width: 50px;
     height: 30px;
     text-align: center;
 }
@@ -216,6 +218,7 @@ form input {
 #defaultCvcCode ul li {
     list-style-type: none;
     display: inline-block;
+    padding: 1px;
 }
 
 

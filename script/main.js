@@ -49,18 +49,27 @@ function validInputString(input) {
 
 $("#code").on("click", function () {
     dynamicColorText(this.id);
+    hideDefaultText(this.id);
+    auditActiveInput(this.id);
 });
 
 $("#cvc").on("click", function () {
     dynamicColorText(this.id);
+    hideDefaultText(this.id);
+    auditActiveInput(this.id);
+
 });
 
 $("#expiry").on("click", function () {
     dynamicColorText(this.id);
+    hideDefaultText(this.id);
+    auditActiveInput(this.id);
 });
 
 $("#fullName").on("click", function () {
     dynamicColorText(this.id);
+    hideDefaultText(this.id);
+    auditActiveInput(this.id);
 });
 
 // connect "id input" to " id block text Angular"
@@ -92,3 +101,42 @@ function dynamicColorText(inputId) {
         previousReqItem = reqItem;
     }
 }
+
+// function hide default text card
+function hideDefaultText(inputId) {
+    var id = getIdDefaultText(inputId);
+    $("#" + id).hide();
+}
+
+function showDefaultText(id) {
+    $("#" + id).show();
+}
+
+// connect "id input" to " id default text card"
+function getIdDefaultText(inputId) {
+    var reqItem;
+    if(inputId == "code") {
+        reqItem = "defaultCodeCard";
+    } else if(inputId == "cvc") {
+        reqItem = "defaultCvcCode";
+    } else if(inputId == "expiry") {
+        reqItem = "defaultTextAngular";
+    } else {
+        reqItem = "defaultNamePerson";
+    }
+
+    return reqItem;
+}
+
+function auditActiveInput(id) {
+    setTimeout(function () {
+        var elem = document.getElementById("" + id).value.length;
+
+        if(elem == 0) {
+            var elemShow = getIdDefaultText(id);
+            showDefaultText("" + elemShow);
+        }
+    }, 2000);
+
+};
+

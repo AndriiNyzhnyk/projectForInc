@@ -144,13 +144,11 @@ function auditActiveInput(id) {
 
 };
 
-// slider cards
+// function control slider
 var card2 = document.getElementById("card2");
 var widthSlider = card2.offsetWidth;
-
-
-// function control slider
 var sup = 0;
+
 function slider(way) {
     if (way == true && sup == 0) {
         card2.style.marginLeft = -widthSlider - 4 + "px";
@@ -167,14 +165,13 @@ function slider(way) {
     var platform = navigator.platform;
     var osW = platform.slice(0, 7);
 
-    if (osW === "Windows") {
+    if (osW === "Win32") {
         setSettingViewForWindows();
     }
-
 })();
 
-
 function setSettingViewForWindows() {
-    
+    $("#defaultCodeCard ul li").css("padding", "0");
+    $("#defaultTextAngular ul li").css("padding", "0");
+    $("#defaultCvcCode ul li").css("padding", "0");
 }
-

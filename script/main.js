@@ -145,9 +145,8 @@ function auditActiveInput(id) {
 };
 
 // slider cards
-var card1 = document.getElementById("card1");
 var card2 = document.getElementById("card2");
-var widthSlider = card1.offsetWidth;
+var widthSlider = card2.offsetWidth;
 
 
 // function control slider
@@ -163,3 +162,19 @@ function slider(way) {
         sup++;
     }
 }
+
+(function infoSystem() {
+    var platform = navigator.platform;
+    var osW = platform.slice(0, 7);
+
+    if (osW === "Windows") {
+        setSettingViewForWindows();
+    }
+
+})();
+
+
+function setSettingViewForWindows() {
+    
+}
+

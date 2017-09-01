@@ -1,10 +1,10 @@
-var module = angular.module("MyApp", []);
+let module = angular.module("MyApp", []);
 
 // function for validation of "input" from letters and characters
 function validInputNumber(input) {
     // filter number
-    var value = input.value;
-    var rep = /[-+*\.;":'a-zA-Zа-яА-Я]/;
+    let value = input.value;
+    let rep = /[-+*\.;":'a-zA-Zа-яА-Я]/;
 
     if (rep.test(value)) {
         value = value.replace(rep, '');
@@ -33,8 +33,8 @@ function validInputNumber(input) {
 
 // function for validation of "input" from numbers and characters
 function validInputString(input) {
-    var value = input.value;
-    var rep = /[-+*/()\.;":'0-9]/;
+    let value = input.value;
+    let rep = /[-+*/()\.;":'0-9]/;
 
     if (rep.test(value)) {
         value = value.replace(rep, '');
@@ -47,21 +47,21 @@ function validInputString(input) {
 }
 
 
-$("#code").on("click", function () {
+$("#code").on("click", function() {
     slider(false);
     dynamicColorText(this.id);
     hideDefaultText(this.id);
     auditActiveInput(this.id);
 });
 
-$("#fullName").on("click", function () {
+$("#fullName").on("click", function() {
     slider(false);
     dynamicColorText(this.id);
     hideDefaultText(this.id);
     auditActiveInput(this.id);
 });
 
-$("#expiry").on("click", function () {
+$("#expiry").on("click", function() {
     slider(false);
     dynamicColorText(this.id);
     hideDefaultText(this.id);
@@ -69,7 +69,7 @@ $("#expiry").on("click", function () {
 });
 
 
-$("#cvc").on("click", function () {
+$("#cvc").on("click", function() {
     slider(true);
     dynamicColorText(this.id);
     hideDefaultText(this.id);
@@ -78,7 +78,7 @@ $("#cvc").on("click", function () {
 
 // connect "id input" to " id block text Angular"
 function getPId(inputId) {
-    var reqItem;
+    let reqItem;
     if(inputId == "code") {
         reqItem = "codeCard";
     } else if(inputId == "cvc") {
@@ -93,9 +93,9 @@ function getPId(inputId) {
 }
 
 // function dynamic color text card
-var previousReqItem;
+let previousReqItem;
 function dynamicColorText(inputId) {
-    var reqItem = getPId(inputId);
+    let reqItem = getPId(inputId);
 
     if(reqItem != previousReqItem) {
         $("#" + reqItem + " p").css("color", "white");
@@ -108,7 +108,7 @@ function dynamicColorText(inputId) {
 
 // function hide default text card
 function hideDefaultText(inputId) {
-    var id = getIdDefaultText(inputId);
+    let id = getIdDefaultText(inputId);
     $("#" + id).hide();
 }
 
@@ -118,7 +118,7 @@ function showDefaultText(id) {
 
 // connect "id input" to " id default text card"
 function getIdDefaultText(inputId) {
-    var reqItem;
+    let reqItem;
     if(inputId == "code") {
         reqItem = "defaultCodeCard";
     } else if(inputId == "cvc") {
@@ -133,21 +133,21 @@ function getIdDefaultText(inputId) {
 }
 
 function auditActiveInput(id) {
-    setTimeout(function () {
-        var elem = document.getElementById("" + id).value.length;
+    setTimeout( () => {
+        let elem = document.getElementById("" + id).value.length;
 
         if(elem == 0) {
-            var elemShow = getIdDefaultText(id);
+            let elemShow = getIdDefaultText(id);
             showDefaultText("" + elemShow);
         }
     }, 2000);
 
-};
+}
 
 // function control slider
-var card2 = document.getElementById("card2");
-var widthSlider = card2.offsetWidth;
-var sup = 0;
+let card2 = document.getElementById("card2");
+let widthSlider = card2.offsetWidth;
+let sup = 0;
 
 function slider(way) {
     if (way == true && sup == 0) {
@@ -162,8 +162,8 @@ function slider(way) {
 }
 
 (function infoSystem() {
-    var platform = navigator.platform;
-    var osW = platform.slice(0, 7);
+    let platform = navigator.platform;
+    let osW = platform.slice(0, 7);
 
     if (osW === "Win32") {
         setSettingViewForWindows();
